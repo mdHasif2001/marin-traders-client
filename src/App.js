@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './Pages/Home/Home/Home';
+import InventoryDetail from './Pages/InventoryDetail/InventoryDetail';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 
@@ -10,8 +11,8 @@ function App() {
        <Header></Header>
        <Routes>
        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/home" element={<Home></Home>}></Route>
-
+        <Route path="/home" element={<Home></Home>}></Route> 
+        <Route path='/service/:serviceId' element={<InventoryDetail></InventoryDetail>}></Route>
        </Routes>
        <Footer></Footer>
 

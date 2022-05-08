@@ -2,7 +2,7 @@ import React from 'react';
 
 const Progress = () => {
     return (
-        <div className='container'>
+        <div className='container my-5'>
             <h2 className='text-center mt-2 mb-5 '>Progress</h2>
             <div className="row container ms-3">
                 

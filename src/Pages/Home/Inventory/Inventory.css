@@ -1,0 +1,15 @@
+.services{
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.btn-custom{
+    border: 1px solid gray;    
+}
+
+.btn-custom:hover {
+    background-color: black;
+    color: white;
+}

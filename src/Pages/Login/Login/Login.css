@@ -1,0 +1,10 @@
+.custom-reg-tex{
+    text-decoration: none;
+    color: black;
+    font-weight: 7000;
+}
+
+.custom-reg-tex:hover{
+    text-decoration: underline;
+    color: gray;
+}

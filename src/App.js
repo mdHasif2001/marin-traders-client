@@ -12,6 +12,7 @@ import InventoryDetail from './Pages/InventoryDetail/InventoryDetail';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import AddInventory from './Pages/AddInventory/AddInventory';
 import Delivered from './Pages/Delivered/Delivered'
+import Blog from './Pages/BLogs/Blog';
 
 function App() {
   return (
@@ -58,6 +59,10 @@ function App() {
 
 
         </Route>
+
+        <Route path='/blog' element={
+          <Blog></Blog>
+        }></Route>
 
        </Routes>
 

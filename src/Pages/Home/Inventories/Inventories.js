@@ -6,18 +6,18 @@ const Inventories = () => {
     const [inventories, setInventories] = useState([]);
 
     useEffect(() => {
-        fetch('service.json')
+        fetch('http://localhost:5000/inventory')
         .then(res => res.json())
         .then(data => setInventories(data))
     }, [])
 
     return (
-        <div id="services" className='container'>
-            <h1 className='text-dark text-center mt-5'>Inventory</h1>
+        <div id="inventories" className='container'>
+            <h2 className='text-dark text-center mt-5'>Inventory</h2>
             <div className="row">
                 {
-                    inventories.map(service => <Inventory key={service.id}
-                        service={service}
+                    inventories.map(myInventory => <Inventory key={myInventory._id}
+                        myInventory={myInventory}
                     >
                     </Inventory>)
                 }

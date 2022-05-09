@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Inventory.css'
 
 const Inventory = ({ myInventory }) => {
@@ -20,6 +20,8 @@ const Inventory = ({ myInventory }) => {
             <button onClick={() => navigateToInventoryDetail(_id)} className='btn btn-custom d-block mx-auto'>Stock</button>
         </div>
     );
+    
 };
+
 
 export default Inventory;

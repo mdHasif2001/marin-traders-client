@@ -5,7 +5,7 @@ import estern from '../../../images/Company/Eastern-Housing.jpg'
 
 const Company = () => {
     return (
-        <div className='container'>
+        <div id="companies" className='container'>
                     <div className='row container my-5'>
             <h2 className='text-center'>Companies</h2>
 

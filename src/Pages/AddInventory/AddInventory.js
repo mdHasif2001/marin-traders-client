@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
+import Loading from '../Shared/Loading/Loading';
 
 
 const AddInventory = () => {
@@ -21,6 +22,10 @@ const AddInventory = () => {
             })
     };
 
+    const handleBtn = () => {
+        <Loading></Loading>
+    }
+
 
     return (
         <div className='w-50 mx-auto my-5'>
@@ -32,8 +37,12 @@ const AddInventory = () => {
                 <input className='mb-2' placeholder='Supplier name' {...register("name", { required: true, maxLength: 20 })} />
                 <textarea className='mb-2' placeholder='Description' {...register("description")} />
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("img")} />
-                <input type="submit" value="Add Service" className='btn btn-custom' />
+
+                
+                <input type="submit" value="Add Inventory" onClick={() => handleBtn()} className='btn btn-custom' />
+                
             </form>
+            
         </div>
     );
 };

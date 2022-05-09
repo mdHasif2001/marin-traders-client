@@ -75,6 +75,7 @@ const Register = () => {
 
             <p>Already have an account? <Link to='/login' className='custom-reg-tex' onClick={navigateLogin}>Please Login</Link></p>
             <SocialLogin></SocialLogin>
+            
         </div>
     );
 };

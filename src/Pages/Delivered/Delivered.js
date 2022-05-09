@@ -20,7 +20,7 @@ const Delivered = () => {
             address: event.target.address.value,
             phone: event.target.phone.value
         }
-        axios.post('http://localhost:5000/myItem', myItem)
+        axios.post('https://glacial-falls-06935.herokuapp.com/myItem', myItem)
             .then(response => {
                 const { data } = response;
                 if (data.insertedId) {

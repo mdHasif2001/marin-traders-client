@@ -13,7 +13,7 @@ const MyItem = () => {
 
         const getmyItems = async () => {
             const email = user?.email;
-            const url = `http://localhost:5000/myItem?email=${email}`;
+            const url = `https://glacial-falls-06935.herokuapp.com/myItem?email=${email}`;
             try {
                 const { data } = await axiosPrivate.get(url);
                 setMyItems(data);

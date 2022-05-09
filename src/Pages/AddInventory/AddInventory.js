@@ -8,7 +8,7 @@ const AddInventory = () => {
 
     const onSubmit = data => {
         console.log(data);
-        const url = `http://localhost:5000/inventory`;
+        const url = `https://glacial-falls-06935.herokuapp.com/inventory`;
         fetch(url, {
             method: 'POST',
             headers: {
@@ -38,11 +38,11 @@ const AddInventory = () => {
                 <textarea className='mb-2' placeholder='Description' {...register("description")} />
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("img")} />
 
-                
+
                 <input type="submit" value="Add Inventory" onClick={() => handleBtn()} className='btn btn-custom' />
-                
+
             </form>
-            
+
         </div>
     );
 };

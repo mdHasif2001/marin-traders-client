@@ -8,7 +8,7 @@ const ManageInventory = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure about that?');
         if (proceed) {
-            const url = `http://localhost:5000/inventory/${id}`;
+            const url = `https://glacial-falls-06935.herokuapp.com/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -25,26 +25,26 @@ const ManageInventory = () => {
             <h2 className='text-center'>Manage Your Inventories</h2>
 
             <div>
-            {
-                inventories.map(inventory => 
-                    <div className='d-flex justify-content-center flex-wrap  p-3 m-3 shadow' key={inventory._id}>
+                {
+                    inventories.map(inventory =>
+                        <div className='d-flex justify-content-center flex-wrap  p-3 m-3 shadow' key={inventory._id}>
 
-                    <div>
-                        <img src={inventory.img} height="400px" className='w-100' alt="" />
-                        <h2>{inventory.name}</h2>
-                        <p>Price: {inventory.price}</p>
-                        <p>Quantity: {inventory.quantity}</p>
-                        <p>Supplier Name: {inventory.supplierName}</p>
-                        <p><small>{inventory.description}</small></p>            
-                        <button className='btn btn-custom px-5' onClick={() => handleDelete(inventory._id)}>X</button>
-                    </div>
+                            <div>
+                                <img src={inventory.img} height="400px" className='w-100' alt="" />
+                                <h2>{inventory.name}</h2>
+                                <p>Price: {inventory.price}</p>
+                                <p>Quantity: {inventory.quantity}</p>
+                                <p>Supplier Name: {inventory.supplierName}</p>
+                                <p><small>{inventory.description}</small></p>
+                                <button className='btn btn-custom px-5' onClick={() => handleDelete(inventory._id)}>X</button>
+                            </div>
+
+                        </div>
+                    )
+                }
 
             </div>
-        )
-            }
 
-            </div>
-            
             <Link className='manage-section btn btn-custom mb-5' to='/addInventory'>Add Items</Link>
 
         </div>

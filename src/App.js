@@ -7,6 +7,10 @@ import Register from './Pages/Login/Register/Register';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
+import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
+import InventoryDetail from './Pages/InventoryDetail/InventoryDetail';
+import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import AddInventory from './Pages/AddInventory/AddInventory';
 
 function App() {
   return (
@@ -17,10 +21,26 @@ function App() {
 
        <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route> 
-
+        <Route path='/inventory/:inventoryId' element={<InventoryDetail></InventoryDetail>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
+
+        <Route path="/addInventory" element={
+          <RequireAuth>
+            <AddInventory></AddInventory>
+          </RequireAuth>
+        }></Route>
+        <Route path="/manage" element={
+          <RequireAuth>
+            <ManageInventory></ManageInventory>
+          </RequireAuth>
+        }></Route>
+        {/* <Route path="/orders" element={
+          <RequireAuth>
+            <Order></Order>
+          </RequireAuth>
+        }></Route> */}
 
 
 

@@ -29,7 +29,7 @@ const Blog = () => {
             <p>
                 1. They have dynamic schema
                 2. They are horizontally scalable
-                3. They doesn't follow ACID property they follow CAP
+                3. They doesn't follow ACID property they always follow CAP
             </p>
         </div>
 

@@ -4,10 +4,10 @@ import './Progress.css'
 
 const Progress = () => {
     return (
-        <div id="progress" className='container my-5'>
-            <Link className='manage-section btn btn-custom mb-5' to='/manage'>Mange Inventories</Link>
-            <h2 className='text-center mt-2 mb-5 '>Progress</h2>
-            <div className="row container ms-3">
+        <div id="progress">
+            <Link className='manage-section btn btn-custom my-5' to='/manage'>Mange Inventories</Link>
+            <h2 className='text-center custom-margin'>Progress</h2>
+            <div className="row custom-progress text-center">
 
                 <div className="col-12 col-md-6 col-lg-3">
                     <h3>200+</h3>

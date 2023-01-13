@@ -8,7 +8,7 @@ const Inventories = () => {
     const [inventories, setInventories] = useState([]);
 
     useEffect(() => {
-        fetch('https://glacial-falls-06935.herokuapp.com/inventory')
+        fetch('https://marin-traders-server.up.railway.app/inventory')
             .then(res => res.json())
             .then(data => setInventories(data))
     }, [])

@@ -8,7 +8,7 @@ const ManageInventory = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure about that?');
         if (proceed) {
-            const url = `https://glacial-falls-06935.herokuapp.com/inventory/${id}`;
+            const url = `https://marin-traders-server.up.railway.app/inventory/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

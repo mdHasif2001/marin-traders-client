@@ -8,7 +8,7 @@ const AddInventory = () => {
 
     const onSubmit = data => {
         console.log(data);
-        const url = `https://glacial-falls-06935.herokuapp.com/inventory`;
+        const url = `https://marin-traders-server.up.railway.app/inventory`;
         fetch(url, {
             method: 'POST',
             headers: {

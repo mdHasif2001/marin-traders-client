@@ -13,7 +13,7 @@ const MyItem = () => {
 
         const getmyItems = async () => {
             const email = user?.email;
-            const url = `https://glacial-falls-06935.herokuapp.com/myItem?email=${email}`;
+            const url = `https://marin-traders-server.up.railway.app/myItem?email=${email}`;
             try {
                 const { data } = await axiosPrivate.get(url);
                 setMyItems(data);
@@ -32,13 +32,13 @@ const MyItem = () => {
     return (
         <div className='w-50 mx-auto'>
             <h2>Your orders: {myItems.length}</h2>
-        {
-            myItems.map(myItem => <div
-                key={myItem._id}
-            >
-                <p>{myItem.email} : {myItem.service}</p>
-            </div>)
-        }
+            {
+                myItems.map(myItem => <div
+                    key={myItem._id}
+                >
+                    <p>{myItem.email} : {myItem.service}</p>
+                </div>)
+            }
         </div>
     );
 };

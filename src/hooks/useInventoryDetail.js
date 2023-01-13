@@ -4,7 +4,7 @@ const useInventoryDetail = inventoryId => {
     const [inventory, setInventory] = useState({});
 
     useEffect(() => {
-        const url = `https://glacial-falls-06935.herokuapp.com/inventory/${inventoryId}`;
+        const url = `https://marin-traders-server.up.railway.app/inventory/${inventoryId}`;
 
         fetch(url)
             .then(res => res.json())
